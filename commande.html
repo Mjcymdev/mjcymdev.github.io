@@ -141,7 +141,7 @@ Mjcym<span>DEV</span>
 
 <label>Création souhaitée</label>
 
-<select name="Produit" required>
+<select name="Produit" id="produit" required>
 
 <option value="">-- Choisir un produit --</option>
 
@@ -179,6 +179,15 @@ Envoyer ma demande
 © 2026 MjcymDEV - Développement FiveM
 
 </footer>
+    
+<script>
+const params = new URLSearchParams(window.location.search);
+const produit = params.get("produit");
+
+if (produit) {
+    document.getElementById("produit").value = produit;
+}
+</script>
 
 </body>
 </html> 
