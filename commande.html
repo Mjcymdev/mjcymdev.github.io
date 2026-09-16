@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Commande - MjcymDEV</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080b12;
+    color: white;
+}
+
+header {
+    padding: 20px 7%;
+    background: #0d121b;
+    border-bottom: 1px solid #263244;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #397cff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #397cff;
+}
+
+.container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 35px;
+    background: #101620;
+    border: 1px solid #263244;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    color: #397cff;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    background: #080b12;
+    color: white;
+    border: 1px solid #263244;
+    border-radius: 7px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #397cff;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2865d8;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #687588;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Mjcym<span>DEV</span>
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="boutique.html">Boutique</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Passer une <span>commande</span></h1>
+
+<form action="mailto:contact@mjcymdev.fr" method="post" enctype="text/plain">
+
+<label>Nom / Pseudo</label>
+<input type="text" name="Nom" required>
+
+<label>Adresse e-mail</label>
+<input type="email" name="Email" required>
+
+<label>Création souhaitée</label>
+
+<select name="Produit" required>
+
+<option value="">-- Choisir un produit --</option>
+
+<option value="Location de véhicules - 9,99€">
+Location de véhicules - 9,99 €
+</option>
+
+<option value="Job Sapeur-Pompier - 19,99€">
+Job Sapeur-Pompier - 19,99 €
+</option>
+
+<option value="Loading Screen - 7,99€">
+Loading Screen - 7,99 €
+</option>
+
+</select>
+
+<label>Message</label>
+
+<textarea
+name="Message"
+placeholder="Indiquez vos besoins ou précisions..."
+></textarea>
+
+<button type="submit">
+Envoyer ma demande
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+© 2026 MjcymDEV - Développement FiveM
+
+</footer>
+
+</body>
+</html> 
