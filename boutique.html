@@ -1,80 +1,236 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique - MjcymDEV</title>
 
-    <title>Boutique | MjcymDEV</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #080b12;
+    color: white;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #080b12;
-            color: white;
-        }
+header {
+    padding: 20px 7%;
+    background: #0d121b;
+    border-bottom: 1px solid #263244;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        header {
-            height: 75px;
-            padding: 0 7%;
-            background: #0b1019;
-            border-bottom: 1px solid #1d2938;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
+.logo span {
+    color: #397cff;
+}
 
-        .logo span {
-            color: #397cff;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        nav a {
-            color: #ccc;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+nav a:hover {
+    color: #397cff;
+}
 
-        nav a:hover {
-            color: #397cff;
-        }
+.hero {
+    text-align: center;
+    padding: 100px 20px 70px;
+    background: radial-gradient(circle, #19315c, #080b12 70%);
+}
 
-        .hero {
-            text-align: center;
-            padding: 90px 20px 60px;
-            background: radial-gradient(circle, #172b50, #080b12 65%);
-        }
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
 
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+.hero h1 span {
+    color: #397cff;
+}
 
-        .hero h1 span {
-            color: #397cff;
-        }
+.hero p {
+    color: #9aa6b8;
+}
 
-        .hero p {
-            color: #8e99aa;
-            font-size: 17px;
-        }
+.products {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
 
-        .shop {
-            padding: 70px 7%;
-        }
+.product {
+    background: #101620;
+    border: 1px solid #263244;
+    border-radius: 15px;
+    padding: 30px;
+}
 
-        .products {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+.product:hover {
+    border-color: #397cff;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.product h2 {
+    margin-bottom: 12px;
+}
+
+.product p {
+    color: #8d99aa;
+    line-height: 1.6;
+}
+
+.price {
+    color: #397cff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #397cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid #263244;
+    color: #687588;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Mjcym<span>DEV</span>
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="boutique.html">Boutique</a>
+<a href="index.html#services">Services</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Boutique <span>MjcymDEV</span></h1>
+
+<p>
+Scripts et créations FiveM pour votre serveur GTA RP.
+</p>
+
+</section>
+
+<section class="products">
+
+<div class="product">
+
+<div class="icon">🚗</div>
+
+<h2>Location de véhicules</h2>
+
+<p>
+Système de location de véhicules pour serveur FiveM.
+</p>
+
+<div class="price">9,99 €</div>
+
+<a class="button" href="mailto:contact@mjcymdev.fr">
+Acheter
+</a>
+
+</div>
+
+<div class="product">
+
+<div class="icon">🚒</div>
+
+<h2>Job Sapeur-Pompier</h2>
+
+<p>
+Job RP destiné aux services de secours sur FiveM.
+</p>
+
+<div class="price">19,99 €</div>
+
+<a class="button" href="mailto:contact@mjcymdev.fr">
+Acheter
+</a>
+
+</div>
+
+<div class="product">
+
+<div class="icon">🖥️</div>
+
+<h2>Loading Screen</h2>
+
+<p>
+Loading screen moderne et personnalisable pour FiveM.
+</p>
+
+<div class="price">7,99 €</div>
+
+<a class="button" href="mailto:contact@mjcymdev.fr">
+Acheter
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 MjcymDEV - Développement FiveM
+
+</footer>
+
+</body>
+</html> 
